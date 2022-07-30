@@ -1,5 +1,4 @@
 import React from "react";
-import "./daily.css";
 
 function DailyWeather({ day, index }) {
   return (
