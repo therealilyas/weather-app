@@ -29,6 +29,9 @@ h2 {
   display: inline-flex;
   vertical-align: middle;
 }
+.current-forecast span img {
+  width: 75px;
+}
 .current-forecast-desc {
   font-size: 18px;
   margin: 10px 0 10px 0;
@@ -55,8 +58,4 @@ h2 {
   width: 100px;
   float: left;
   text-align: center;
-}
-/* ==== */
-
-.search-input {
 }

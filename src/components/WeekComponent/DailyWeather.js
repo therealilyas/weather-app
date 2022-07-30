@@ -5,24 +5,26 @@ function DailyWeather({ day, index }) {
     <tr>
       <td className="weather-row-day  ">
         <strong>Ertaga</strong>
-        <div>24</div>
+        <div>24 Iyul</div>
       </td>
       <td className="weather-row-day-short   ">
-        {/* <strong>{props}</strong> */}
+        <strong>24 iyul</strong>
         <div>24 iyul</div>
       </td>
       <td className="weather-row-forecast-icon">
         <span title="#">
           <img
             src={`http://openweathermap.org/img/w/${day.weather[0].icon}.png`}
-            title="Ochiq havo"
+            title={day.weather[0].description}
             alt="text"
           />
         </span>
       </td>
       <td className="weather-row-forecast">
-        <span className="forecast-day">+{day.feels_like.day}°</span>
-        <span className="forecast-night">+{day.feels_like.night}°</span>
+        <span className="forecast-day">+{Math.floor(day.feels_like.day)}°</span>
+        <span className="forecast-night">
+          +{Math.floor(day.feels_like.night)}°
+        </span>
       </td>
       <td className="weather-row-desc">{day.weather[0].description}</td>
       <td className="weather-row-pop">{day.humidity}%</td>

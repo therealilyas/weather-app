@@ -6,7 +6,11 @@ h3 {
 .grid-2 .padd-block {
   padding-bottom: 0;
 }
-/* .grid-1, */
+.grid-1 {
+  width: 300px;
+  display: block;
+  float: left;
+}
 .grid-2 {
   width: 410px;
   display: block;
