@@ -19,9 +19,12 @@ export default function WeekWeather() {
       )
         .then((res) => res.json())
         .then((data) => {
-          // console.log("Data", data);
+          console.log("Data", data);
           // console.log("Daily Data", data.daily);
           daysArr.push(data.daily);
+
+          // setDaysArr((current) => [...current, data.daily]);
+
           data.daily.map((day, index) => {
             let { temp, humidity, wind_speed, feels_like } = day;
             console.log({
