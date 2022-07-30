@@ -9,6 +9,23 @@ export default function App() {
 
   const [weatherData, setWeatherData] = useState([{}]);
   const [currentData, setCurrentData] = useState([{}]);
+  const dataMonth = new Date().getMonth();
+
+  const monthArr = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = monthArr[dataMonth];
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((success) => {
@@ -33,9 +50,15 @@ export default function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <TodayWeather weatherData={weatherData} currentData={currentData} />
+        <TodayWeather
+          month={month}
+          weatherData={weatherData}
+          currentData={currentData}
+        />
 
-        {weatherData?.daily && <WeekWeather daysArr={weatherData.daily} />}
+        {weatherData?.daily && (
+          <WeekWeather daysArr={weatherData.daily} month={month} />
+        )}
       </div>
     </div>
   );
