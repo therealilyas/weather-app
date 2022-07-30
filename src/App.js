@@ -9,6 +9,9 @@ export default function App() {
 
   const [weatherData, setWeatherData] = useState([{}]);
   const [currentData, setCurrentData] = useState([{}]);
+  const [imgData, setImgData] = useState();
+  const [weatherDesc, setWeatherDesc] = useState();
+
   const dataMonth = new Date().getMonth();
 
   const monthArr = [
@@ -36,9 +39,11 @@ export default function App() {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log({ data });
+          console.log("Data", { data });
           setWeatherData(data);
           setCurrentData(data.current);
+          setImgData(data.current.weather[0].icon);
+          setWeatherDesc(data.current.weather[0].main);
         })
         .catch((err) => {
           console.log({ err });
@@ -47,19 +52,21 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App">
+    <>
       <Header />
       <div className="container">
         <TodayWeather
           month={month}
           weatherData={weatherData}
           currentData={currentData}
+          imgData={imgData}
+          weatherDesc={weatherDesc}
         />
 
         {weatherData?.daily && (
           <WeekWeather daysArr={weatherData.daily} month={month} />
         )}
       </div>
-    </div>
+    </>
   );
 }

@@ -1,3 +1,14 @@
+.grid-1,
+.grid-2 {
+  margin: 10px 18px 10px 0;
+}
+.grid-1,
+.grid-2 {
+  width: 392px;
+  display: block;
+  float: left;
+}
+
 .cont-block {
   background: #fff;
 }

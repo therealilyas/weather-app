@@ -1,16 +1,13 @@
 import React from "react";
+import "./daily.css";
 
 function DailyWeather({ day, index }) {
   return (
     <tr>
-      <td className="weather-row-day  ">
-        <strong>Ertaga</strong>
-        <div>24 Iyul</div>
+      <td className="weather-row-day">
+        <strong>Day {index}</strong>
       </td>
-      <td className="weather-row-day-short   ">
-        <strong>24 iyul</strong>
-        <div>24 iyul</div>
-      </td>
+
       <td className="weather-row-forecast-icon">
         <span title="#">
           <img

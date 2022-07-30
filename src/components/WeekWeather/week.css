@@ -1,20 +1,16 @@
 h3 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
 }
 .grid-2 .padd-block {
   padding-bottom: 0;
 }
 .grid-1 {
   width: 300px;
-  display: block;
-  float: left;
 }
 .grid-2 {
-  width: 410px;
-  display: block;
-  float: left;
+  width: 350px;
 }
 .padd-block {
   padding: 16px;
@@ -46,20 +42,21 @@ tr {
 }
 .weather-table td,
 .weather-table th {
-  padding: 8px 16px;
+  padding: 4px 8px;
   text-align: left;
 }
 .weather-table td {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   vertical-align: top;
+  font-size: 14px;
 }
 .weather-table td.weekend strong {
   color: #c44202;
 }
 .weather-table td,
 .weather-table th {
-  padding: 8px 16px;
+  padding: 4px 8px;
   text-align: left;
 }
 .weather-row-forecast-icon {
@@ -67,13 +64,16 @@ tr {
   padding-left: 0 !important;
 }
 .weather-row-forecast {
-  font-size: 16px;
-  width: 40px;
-  padding-left: 6px !important;
+  font-size: 14px;
+  width: 10px;
+  padding-left: 5px !important;
 }
 .weather-row-forecast span {
   display: inline-flex;
   vertical-align: middle;
+}
+.weather-row-forecast span img {
+  width: 15px;
 }
 .weather-row-forecast .forecast-night {
   color: #999;
